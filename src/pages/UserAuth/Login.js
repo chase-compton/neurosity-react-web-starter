@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
 import useEffectOnce from "react-use/lib/useEffectOnce";
 
-import { LoginForm } from "../components/LoginForm";
-import { Footer } from "../components/Footer";
+import { LoginForm } from "../../components/LoginForm/LoginForm";
+import { Footer } from "../../components/Footer/Footer";
 
-import { notion, useNotion } from "../services/notion";
+import { notion, useNotion } from "../../services/notion";
 
 export function Login() {
   const { user, lastSelectedDeviceId, setSelectedDevice } = useNotion();
@@ -37,7 +37,7 @@ export function Login() {
         resetForm();
 
         if (lastSelectedDeviceId) {
-          navigate("/");
+          navigate("/activities");
         } else {
           navigate("/devices");
         }

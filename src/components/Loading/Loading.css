@@ -1,0 +1,30 @@
+/**
+ * components/Loading.js
+ */
+
+ .loading-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-spinner {
+    border-radius: 50%;
+    border: 8px solid rgba(113, 211, 211, 0.5);
+    border-top: 8px solid rgb(113, 211, 211);
+    height: 40px;
+    width: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

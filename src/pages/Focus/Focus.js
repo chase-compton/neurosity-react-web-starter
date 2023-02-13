@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
+import './Focus.css';
+import { notion, useNotion } from "../../services/notion";
+import { Nav } from "../../components/Nav/Nav";
 
-import { notion, useNotion } from "../services/notion";
-import { Nav } from "../components/Nav";
-
-export function Calm() {
+export function Focus() {
   const { user } = useNotion();
-  const [calm, setCalm] = useState(0);
+  const [focus, setFocus] = useState(0);
 
   useEffect(() => {
     if (!user) {
@@ -19,9 +19,9 @@ export function Calm() {
       return;
     }
 
-    const subscription = notion.calm().subscribe((calm) => {
-      const calmScore = Math.trunc(calm.probability * 100);
-      setCalm(calmScore);
+    const subscription = notion.focus().subscribe((focus) => {
+      const focusScore = Math.trunc(focus.probability * 100);
+      setFocus(focusScore);
     });
 
     return () => {
@@ -32,8 +32,8 @@ export function Calm() {
   return (
     <main className="main-container">
       {user ? <Nav /> : null}
-      <div className="calm-score">
-        &nbsp;{calm}% <div className="calm-word">Calm</div>
+      <div className="focus-score">
+        &nbsp;{focus}% <div className="focus-word">Focus</div>
       </div>
     </main>
   );

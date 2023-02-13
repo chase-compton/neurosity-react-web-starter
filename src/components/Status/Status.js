@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
-
-import { useNotion } from "../services/notion";
+import { useNotion } from "../../services/notion";
+import './Status.css';
 
 const statesLabels = {
   booting: "Starting OS...",

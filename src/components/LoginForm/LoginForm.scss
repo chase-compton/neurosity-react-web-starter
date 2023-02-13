@@ -1,0 +1,31 @@
+/**
+ * components/LoginForm.js
+ */
+
+ .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form .row {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e6ecef;
+    font-family: monospace;
+  }

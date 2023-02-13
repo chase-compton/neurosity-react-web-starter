@@ -1,8 +1,8 @@
 import React from "react";
 import { navigate } from "@reach/router";
 
-import { Status } from "./Status";
-import { Footer } from "./Footer";
+import { Status } from "../Status/Status";
+import { Footer } from "../Footer/Footer";
 
 export function Nav() {
   function goToLogout() {

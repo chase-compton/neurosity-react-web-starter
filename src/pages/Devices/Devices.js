@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
-
-import { notion, useNotion } from "../services/notion";
+import { notion, useNotion } from "../../services/notion";
 
 export function Devices() {
   const { user, lastSelectedDeviceId } = useNotion();
